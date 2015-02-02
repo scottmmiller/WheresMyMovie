@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+	<html lang="en" ng-app='skootsMovies' ng-controller='MainCtrlr'>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="styles.css">
+		<title>Where Is My Movie?!?!</title>
+	</head>
+	<body>
+		<header> 
+			<h1> Skoot's Movies </h1>
+		</header>
+		
+		<div> {{test}}</div> <br />
+
+		<div>
+			<form name="movie-request">
+				<input class='ask' type="text" ng-model='searchTerm' placeholder='Movie Title Here' />
+				<button class='askButton' ng-disabled='movie-request.$invalid' ng-click='newMovie()'> Ask!! </button>
+			</form>
+		</div>
+
+		<ng-view></ng-view>
+
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.11/angular.min.js"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.11/angular-route.js'></script>
+	<script type="text/javascript" src='js/appModule.js'></script>
+	<script type="text/javascript" src='js/controllers/MainCtrlr.js'></script>
+	<script type="text/javascript" src='js/controllers/TheaterCtrlr.js'></script>
+	<script type="text/javascript" src='js/controllers/DiscCtrlr.js'></script>
+	<script type="text/javascript" src='js/services/moviesServices.js'></script>
+
+
+
+
+	</body>
+</html>

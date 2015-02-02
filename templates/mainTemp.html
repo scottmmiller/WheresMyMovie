@@ -1,0 +1,21 @@
+<div class='movies-list'>
+
+
+	<h2 ng-show='movies'>HERE ARE YOUR MOVIES</h2>
+
+
+	<ul ng-show='movies'>
+		<h3> On DVD or Blu-Ray </h3>
+		<li ng-repeat='dvd in movies | filter: dvdFilter'>
+			<a ng-href="#/disc/{{dvds.$id}}"> {{dvd.title}} </a>
+
+		</li>
+	</ul>
+
+		<ul ng-show='movies'>
+		<h3> In Theaters </h3>
+		<li ng-repeat='theater in movies | filter: theaterFilter'>
+			<a ng-href="#/theater/{{theater.$id}}">{{theater.title}}</a>
+		</li>
+	</ul>
+</div>
