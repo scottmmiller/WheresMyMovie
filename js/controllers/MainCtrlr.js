@@ -6,18 +6,13 @@ app.controller('MainCtrlr', function($scope, moviesService) {
 
 	$scope.newMovie = function() {
 		moviesService.getInfo($scope.searchTerm).then(function(response) {
-			$scope.movies = response;
+			$scope.dvds = response.onDvd;
+			$scope.theater = response.inTheater;
+			$scope.coming = response.comingSoon;
+
 		});
 		$scope.searchTerm = '';
 
-	}
-
-	$scope.dvdFilter = function(item) {
-		return !!item.release_dates.dvd;
-	}
-	
-	$scope.theaterFilter = function(item) {
-		return !item.release_dates.dvd;
 	}
 
 

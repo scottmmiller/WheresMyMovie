@@ -4,18 +4,32 @@
 	<h2 ng-show='movies'>HERE ARE YOUR MOVIES</h2>
 
 
-	<ul ng-show='movies'>
+	<ul ng-show='dvds'>
 		<h3> On DVD or Blu-Ray </h3>
-		<li ng-repeat='dvd in movies | filter: dvdFilter'>
+		<li ng-repeat='dvd in dvds'>
+			<img src="{{dvd.posters.thumbnail}}">
 			<a ng-href="#/disc/{{dvds.$id}}"> {{dvd.title}} </a>
+				{{dvd.synopsis}}
+		</li>
+	</ul>
+
+	<ul ng-show='theater'>
+		<h3> In Theaters </h3>
+		<li ng-repeat='movie in theater'>
+			<img src="{{movie.posters.thumbnail}}">
+			<a ng-href="#/movie/{{movie.$id}}">{{movie.title}}</a>
+				{{theater.synopsis}}
 
 		</li>
 	</ul>
 
-		<ul ng-show='movies'>
-		<h3> In Theaters </h3>
-		<li ng-repeat='theater in movies | filter: theaterFilter'>
-			<a ng-href="#/theater/{{theater.$id}}">{{theater.title}}</a>
+	<ul ng-show='coming'>
+		<h3> Coming to Theaters </h3>
+		<li ng-repeat='movie in coming'>
+			<img src="{{movie.posters.thumbnail}}">
+			<a ng-href="#/movie/{{movie.$id}}">{{movie.title}}</a>
+				{{coming.synopsis}}
+
 		</li>
 	</ul>
 </div>

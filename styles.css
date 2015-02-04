@@ -19,6 +19,12 @@ header {
 	height: 25px;
 }
 
-/*.movies-list {
-	display: none;
+.movies-list {
+	vertical-align: middle;
+	display: inline-block;
+}
+/*
+img {
+	float: left;
 }*/
+
