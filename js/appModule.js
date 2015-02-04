@@ -10,11 +10,11 @@ app.config(function($routeProvider) {
 		resolve: {
 
 		}
-	}).when('/disc', {
+	}).when('/disc/:movieId', {
 		templateUrl: 'templates/discTemp.html',
 		controller: 'DiscCtrlr',
 		resolve: {
-
+			
 		}
 	}).otherwise( {
 		redirectTo: '/'

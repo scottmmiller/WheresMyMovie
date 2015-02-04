@@ -24,7 +24,7 @@ app.service('moviesService', function($http, $q, $location) {
 				var releaseDate = movieData[i].release_dates;
 				if(!releaseDate.dvd && !releaseDate.theater) {
 					noReleaseDate.push(movieData[i]);
-				} else if(releaseDate.dvd) {
+				} else if(releaseDate.dvd || moment(releaseDate.theater) < today.subtract(365, 'days')) {
 					onDvdArray.push(movieData[i]);
 				} else {
 					if(moment(releaseDate.theater) >  today) {

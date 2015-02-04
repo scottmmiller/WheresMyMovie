@@ -9,10 +9,11 @@ app.controller('MainCtrlr', function($scope, moviesService) {
 			$scope.dvds = response.onDvd;
 			$scope.theater = response.inTheater;
 			$scope.coming = response.comingSoon;
+			$scope.noRelease = response.noReleaseDate;
+			console.log(response)
 
 		});
 		$scope.searchTerm = '';
-
 	}
 
 

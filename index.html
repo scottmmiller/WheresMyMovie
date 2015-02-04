@@ -2,15 +2,17 @@
 	<html lang="en" ng-app='skootsMovies' ng-controller='MainCtrlr'>
 	<head>
 		<meta charset="UTF-8">
+		<link href='http://fonts.googleapis.com/css?family=Permanent+Marker|Gloria+Hallelujah|Rock+Salt' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="styles.css">
-		<title>Where Is My Movie?!?!</title>
+
+		<title>Where's My Movie?!?!</title>
 	</head>
 	<body>
 		<header> 
-			<h1> Skoot's Movies </h1>
+			<h1> Where's My Movie?!?! </h1>
 		</header>
 		
-		<div>
+		<div class='movie-request'>
 			<form name="movie-request">
 				<input class='ask' type="text" ng-model='searchTerm' placeholder='Movie Title Here' />
 				<button class='askButton' ng-disabled='movie-request.$invalid' ng-click='newMovie()'> Ask!! </button>

@@ -1,11 +1,31 @@
 html, body {
+	background: rgb(114, 131, 137);
 	height: 100%;
 	width: 100%;
 	margin: 0;
+	font-family: sans-serif;
+	font-size: 14px;
 }
 
 header {
+	font-family: 'Rock Salt', cursive;
 	padding: 20px;
+	text-align: center;
+}
+
+h2 {
+	font-family: 'Permanent Marker', cursive;
+}
+
+a:link {
+	color: rgb(53, 58, 55);
+	font-family: 'Gloria Hallelujah', cursive;
+	font-size: 20px;
+}
+
+.movie-request {
+	border: none;
+	text-align: center;
 }
 
 .ask {
@@ -23,8 +43,22 @@ header {
 	vertical-align: middle;
 	display: inline-block;
 }
-/*
-img {
-	float: left;
-}*/
 
+li {
+	list-style-type: none;
+	margin-bottom: 20px;
+	height: 150px;
+}
+
+.thumbnail {
+	float: left;
+	padding-right: 10px;
+	padding-bottom: 25px;
+	width: 82px;
+	height: 106px;
+}
+
+
+.synopsis {
+	display: block;
+}
